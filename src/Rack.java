@@ -1,6 +1,14 @@
 public class Rack {
     Shelf[] shelves;
 
+    public Shelf[] getShelves() {
+        return shelves;
+    }
+
+    Shelf getShelf(int index) { //конкретная полка
+        return shelves[index];
+    }
+
     public Rack(Shelf[] shelves) {
         this.shelves = shelves;
     }
@@ -31,11 +39,5 @@ public class Rack {
             }
         }
         return -1;
-    }
-    public Shelf[] getShelves(int index) {
-        return shelves;
-    }
-    public Shelf[] getShelves() {
-        return shelves;
     }
 }

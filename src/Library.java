@@ -2,12 +2,12 @@ public class Library {
     Rack[] racks;
 
     public Library(Rack[] racks) {
-
+        this.racks = racks;
     }
 
-    public Rack[] getRacks(int index) {
+    Rack getRacks(int index) { // конкретный стеллаж
         if (index <= 0) return null;
-        return racks;
+        return racks[index];
     }
 
     int totalBooks() {
@@ -68,7 +68,8 @@ public class Library {
         }
         return null;
     }
-    public String toSting (){
+    @Override
+    public String toString (){
         StringBuilder sb = new StringBuilder();
         sb.append("В библиотеке: ");
         for (int i = 0; i < racks.length; i++) {
@@ -89,6 +90,6 @@ public class Library {
                 }
             }
         }
-        return toSting();
+        return toString();
     }
 }
